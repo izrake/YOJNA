@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Yojna</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings"></string>
+    <string name="about_us">About</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="title_activity_about_us">AboutUs</string>
+    <string name="title_activity_info_us">InfoUs</string>
+    <string name="firstButton">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;Sarkari&#10;Yuva Yojna
+    </string>
+    <string name="title_activity_vikas_yojna">VikasYojna</string>
+    <string-array name="listView">
+        <item>Deen Dayal Hathkargha-Protsahan Yojna</item>
+        <item>Rashtriya Krishi Vikas Yojna </item>
+        <item>Pradhanmantri Gram Sadak Yojna</item>
+        <item>National Rail Vikas Yojna</item>
+        <item>Indira Awas Yojna</item>
+        <item>Sabla or Rajeev Gandhi Scheme For Empowerment For Adolescent Girl</item>
+        <item>Valmiki Ambedkar Awaas Yojna</item>
+        <item>Pradhanmantri Adarsh Gram Yojna</item>
+        <item>Doodh Ganga</item>
+        <item>Rajeev Gandhi Grameen Vidyutikaran Yojna</item>
+        <item>Ambedkar Hastshilp Vikas Yojna</item>
+        <item>Rashtriya Sam Vikas Yojna</item>
+        <item>Bharat Niraman</item>
+        <item>Integrated Handloom Training Project,IHTP</item>
+        <item>Biju Kushak Vikas Yojna</item>
+        <item>Mahatma Gandhi Pravasi Yojna</item>
+        <item>Member Of Parliament Local Area Development Scheme</item>
+        <item>Janashree Bima Yojna</item>
+        <item>Bachat Lamp Yojna</item>
+        <item>National Pension Scheme</item>
+        <item>Pradhanmantri Kaunshal Vikas Yojna</item>
+        <item>Smart City Mission</item>
+        <item>Skill India Programme</item>
+        <item>Deen Dayal Upadhyaya Gram Jyoti Yojna</item>
+        <item>Digital India Programme</item>
+
+        </string-array>
+
+
+    <string name="title_activity_create_db_demo">CreateDbDemo</string>
+</resources>
