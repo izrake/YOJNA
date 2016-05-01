@@ -20,8 +20,8 @@ import java.sql.SQLException;
 public class VikasYojna extends AppCompatActivity {
     private ListView listView;
     private String[] stringArray;
-    private ArrayAdapter adapter;
     private SQLiteDatabase db;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class VikasYojna extends AppCompatActivity {
         listView=(ListView)findViewById(R.id.listView);
 
       stringArray=getResources().getStringArray(R.array.listView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, stringArray);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,28 +40,26 @@ public class VikasYojna extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // ListView Clicked item index
                 int itemPosition = position;
+                String itemValue = (String) listView.getItemAtPosition(position);
                 // ListView Clicked item value
-                SQLiteDatabase db=openOrCreateDatabase("VikasDB", Context.MODE_PRIVATE, null);
+                db = openOrCreateDatabase("VikasDB", Context.MODE_PRIVATE, null);
 
-                StringBuffer buffer=new StringBuffer();
-                if (position==1){
-                    Cursor c=db.rawQuery("SELECT * FROM detail WHERE id= 1", null);
-                    if(c.moveToFirst())
-                    {
-                        buffer.append("Title: "+c.getString(0)+"\n");
-                        buffer.append("Detail: "+c.getString(1)+"\n");
-                        buffer.append("Id: "+c.getString(2)+"\n\n");
-                    }
+                StringBuffer buffer = new StringBuffer();
 
-                    showMessage("Vikas yona",buffer.toString());
+                Cursor c = db.rawQuery("SELECT * FROM detail WHERE id=" + itemPosition, null);
+                if (c.moveToFirst()) {
+                    buffer.append("Title: " + c.getString(0) + "\n");
+                    buffer.append("Detail: " + c.getString(1) + "\n");
+                    buffer.append("Id: " + c.getString(2) + "\n\n");
                 }
 
+                showMessage(itemValue, buffer.toString());
 
-              //  String itemValue = (String) listView.getItemAtPosition(position);
+
                 // Show Alert
                 //Toast.makeText(getApplicationContext(),
-                  //      "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-                   //     .show();
+                //    "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
+                //  .show();
             }
         });
 
